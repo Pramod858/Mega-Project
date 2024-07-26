@@ -1,3 +1,5 @@
+#AUTHOR: Pramod Badiger
+
 terraform {
     required_providers {
         aws = {
