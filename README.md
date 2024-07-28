@@ -1,5 +1,7 @@
 # Project Title: Automated CI/CD Pipeline with AWS EKS, Ansible, Jenkins, and Docker
-![diagram-export-25-7-2024-9_49_19-pm](https://github.com/user-attachments/assets/fba4b6d3-a865-42a8-a430-006d7db57001)
+
+![diagram-export-28-7-2024-9_29_32-pm](https://github.com/user-attachments/assets/0da3ec4c-b438-4eb8-8787-c951ddaa6c93)
+
 
 ## Overview
 
