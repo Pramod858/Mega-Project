@@ -1,4 +1,4 @@
-name: Apply or Destroy Strapi with Terraform
+name: Apply or Destroy EKS with Terraform
 
 on:
   workflow_dispatch:
