@@ -19,16 +19,8 @@ resource "aws_subnet" "public-subnet-1" {
     
     tags = {
         Name = "public-subnet-1"
-    }
-}
-
-resource "aws_subnet" "private-subnet-1" {
-    vpc_id            = aws_vpc.EKS_VPC.id
-    cidr_block        = var.private_sb1_cidr
-    availability_zone = "${var.region}a"
-    
-    tags = {
-        Name = "private-subnet-1"
+        "kubernetes.io/role/elb" = "1"
+        "kubernetes.io/cluster/demo-eks-cluster" = "shared"
     }
 }
 
@@ -40,6 +32,20 @@ resource "aws_subnet" "public-subnet-2" {
     
     tags = {
         Name = "public-subnet-2"
+        "kubernetes.io/role/elb" = "1"
+        "kubernetes.io/cluster/demo-eks-cluster" = "shared"
+    }
+}
+
+resource "aws_subnet" "private-subnet-1" {
+    vpc_id            = aws_vpc.EKS_VPC.id
+    cidr_block        = var.private_sb1_cidr
+    availability_zone = "${var.region}a"
+    
+    tags = {
+        Name = "private-subnet-1"
+        "kubernetes.io/role/internal-elb" = "1"
+        "kubernetes.io/cluster/demo-eks-cluster" = "shared"
     }
 }
 
@@ -50,6 +56,8 @@ resource "aws_subnet" "private-subnet-2" {
     
     tags = {
         Name = "private-subnet-2"
+        "kubernetes.io/role/internal-elb" = "1"
+        "kubernetes.io/cluster/demo-eks-cluster" = "shared"
     }
 }
 
